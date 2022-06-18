@@ -1,0 +1,34 @@
+{
+    "title": "Akuvo Des2",
+    "desc": "",
+    "style": {
+        "palette": "vivid"
+    },
+    "layout": "./layout.json",
+    "datasource": {
+        "title": "Sample ECommerce",
+        "id": "localhost_aSampleIAAaECommerce",
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce"
+    },
+    "filters": "./filters.json",
+    "oid": "62ad98f18700540037cce049",
+    "options": {
+        "manual": false
+    },
+    "parentFolder": null,
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "widgets": [
+        "./widgets/62ad98f18700540037cce04a/widget.json",
+        "./widgets/62ad98f18700540037cce04b/widget.json",
+        "./widgets/62ad98f18700540037cce04c/widget.json",
+        "./widgets/62ad98f18700540037cce04d/widget.json",
+        "./widgets/62ad98f18700540037cce04e/widget.json",
+        "./widgets/62ad98f18700540037cce04f/widget.json",
+        "./widgets/62ad98f18700540037cce050/widget.json",
+        "./widgets/62ad98f18700540037cce051/widget.json",
+        "./widgets/62ad98f18700540037cce052/widget.json"
+    ]
+}
