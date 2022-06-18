@@ -21,10 +21,12 @@
                     "explicit": false,
                     "multiSelection": true,
                     "all": true
-                }
+                },
+                "isDashboardFilter": true
             },
             "isCascading": false,
-            "disabled": false
+            "disabled": false,
+            "instanceid": "419D5-D4FE-6A"
         },
         {
             "jaql": {
@@ -44,32 +46,11 @@
                     "explicit": false,
                     "multiSelection": true,
                     "all": true
-                }
-            },
-            "isCascading": false
-        },
-        {
-            "jaql": {
-                "datasource": {
-                    "title": "Sample Lead Generation",
-                    "fullname": "LocalHost/Sample Lead Generation",
-                    "id": "localhost_aSampleIAAaLeadIAAaGeneration",
-                    "address": "LocalHost",
-                    "database": "aSampleIAAaLeadIAAaGeneration"
                 },
-                "column": "Country",
-                "dim": "[Lead Generation.Country]",
-                "datatype": "text",
-                "title": "LOCATION",
-                "collapsed": false,
-                "filter": {
-                    "explicit": false,
-                    "multiSelection": true,
-                    "all": true
-                }
+                "isDashboardFilter": true
             },
             "isCascading": false,
-            "disabled": false
+            "instanceid": "A5D99-33D1-45"
         }
     ]
 }

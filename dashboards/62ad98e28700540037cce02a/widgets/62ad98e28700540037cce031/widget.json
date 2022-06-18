@@ -29,7 +29,8 @@
                             "datatype": "text",
                             "merged": true,
                             "title": "Landing Page"
-                        }
+                        },
+                        "instanceid": "73E96-765B-5B"
                     },
                     {
                         "jaql": {
@@ -48,7 +49,8 @@
                                 "months": "MM/yyyy",
                                 "days": "shortDate"
                             }
-                        }
+                        },
+                        "instanceid": "B4281-BF4C-6C"
                     }
                 ]
             },
@@ -81,7 +83,8 @@
                                 "color": "#00cee6",
                                 "type": "color"
                             }
-                        }
+                        },
+                        "instanceid": "BD2AC-D3B1-A9"
                     }
                 ]
             },
@@ -110,7 +113,8 @@
                                     "inResultset": true
                                 }
                             }
-                        }
+                        },
+                        "instanceid": "C084C-5AFA-BB"
                     }
                 ]
             },
@@ -118,7 +122,8 @@
                 "name": "filters",
                 "items": []
             }
-        ]
+        ],
+        "usedFormulasMapping": {}
     },
     "dashboardid": "62ad98e28700540037cce02a",
     "options": {
@@ -129,7 +134,9 @@
             "min": null,
             "max": null
         },
-        "maxCharsPerLabelXAxis": 5
+        "maxCharsPerLabelXAxis": 5,
+        "autoUpdateOnEveryChange": true,
+        "drillToAnywhere": true
     },
     "style": {
         "lineWidth": {
@@ -210,5 +217,14 @@
         "widgets": {
             "duplicate": false
         }
-    }
+    },
+    "continuousDates": false,
+    "hasExcessiveSeries": false,
+    "instanceid": "AC968-C793-A9",
+    "maxDate": 1412110800000,
+    "minDate": 1356991200000,
+    "nullAsZero": false,
+    "queryStartTime": "2022-06-18T12:23:23",
+    "realTimeRefreshing": false,
+    "tickLevel": "quater"
 }
