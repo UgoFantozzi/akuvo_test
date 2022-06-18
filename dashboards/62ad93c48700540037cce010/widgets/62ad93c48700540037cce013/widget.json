@@ -1,0 +1,254 @@
+{
+    "title": "Profit over Time",
+    "type": "chart/line",
+    "subtype": "line/basic",
+    "oid": "62ad93c48700540037cce013",
+    "desc": null,
+    "datasource": {
+        "title": "Sample Retail",
+        "fullname": "LocalHost/Sample Retail",
+        "id": "localhost_aSampleIAAaRetail",
+        "address": "LocalHost",
+        "database": "aSampleIAAaRetail"
+    },
+    "metadata": {
+        "ignore": {
+            "dimensions": [],
+            "ids": [],
+            "all": false
+        },
+        "panels": [
+            {
+                "name": "x-axis",
+                "items": [
+                    {
+                        "jaql": {
+                            "table": "DimDate",
+                            "column": "Date",
+                            "dim": "[DimDate.Date (Calendar)]",
+                            "datatype": "datetime",
+                            "merged": true,
+                            "level": "months",
+                            "title": "Months in Date"
+                        },
+                        "format": {
+                            "mask": {
+                                "years": "yyyy",
+                                "quarters": "yyyy Q",
+                                "months": "MM/yyyy",
+                                "weeks": "ww yyyy",
+                                "days": "shortDate",
+                                "minutes": "HH:mm",
+                                "isdefault": true
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "field": {
+                            "id": "[DimDate.Date (Calendar)]_months",
+                            "index": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "values",
+                "items": [
+                    {
+                        "jaql": {
+                            "type": "measure",
+                            "formula": "sum([1BD20-7D6])-[07F57-66D]",
+                            "context": {
+                                "[07F57-66D]": {
+                                    "table": "Fact_Purchase_Orders",
+                                    "column": "PurchaseCost",
+                                    "dim": "[Fact_Purchase_Orders.PurchaseCost]",
+                                    "datatype": "numeric",
+                                    "agg": "sum",
+                                    "title": "Total PurchaseCost"
+                                },
+                                "[1BD20-7D6]": {
+                                    "table": "Fact_Sale_orders",
+                                    "column": "OrderRevenue",
+                                    "dim": "[Fact_Sale_orders.OrderRevenue]",
+                                    "datatype": "numeric",
+                                    "title": "Order Revenue"
+                                }
+                            },
+                            "title": "sum([Order Revenue])-[Total PurchaseCost]"
+                        },
+                        "format": {
+                            "mask": {
+                                "type": "number",
+                                "abbreviations": {
+                                    "t": true,
+                                    "b": true,
+                                    "m": true,
+                                    "k": true
+                                },
+                                "separated": true,
+                                "decimals": "auto",
+                                "isdefault": true
+                            },
+                            "color": {
+                                "color": "#6EDA55",
+                                "type": "color"
+                            }
+                        },
+                        "field": {
+                            "id": "sum([1BD20-7D6])-[07F57-66D]",
+                            "index": 3
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "break by",
+                "items": []
+            },
+            {
+                "name": "filters",
+                "items": []
+            }
+        ]
+    },
+    "dashboardid": "62ad93c48700540037cce010",
+    "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false
+    },
+    "instanceid": "7CF38-CC6F-4A",
+    "options": {
+        "dashboardFiltersMode": "select",
+        "selector": true,
+        "triggersDomready": true,
+        "autoUpdateOnEveryChange": true,
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "min": 0,
+            "max": 11
+        },
+        "selectorLocked": false
+    },
+    "style": {
+        "lineWidth": {
+            "width": "bold"
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "xAxis": {
+            "enabled": true,
+            "ticks": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            },
+            "gridLines": true,
+            "isIntervalEnabled": false
+        },
+        "yAxis": {
+            "inactive": false,
+            "enabled": true,
+            "ticks": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "title": {
+                "enabled": false
+            },
+            "gridLines": true,
+            "logarithmic": false,
+            "isIntervalEnabled": true,
+            "hideMinMax": false
+        },
+        "y2Axis": {
+            "inactive": true,
+            "enabled": true,
+            "ticks": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "title": {
+                "enabled": false
+            },
+            "gridLines": false,
+            "logarithmic": false,
+            "isIntervalEnabled": true,
+            "hideMinMax": false
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "dataLimits": {
+            "seriesCapacity": 50,
+            "categoriesCapacity": 100000
+        },
+        "narration": {
+            "enabled": false,
+            "display": "above",
+            "format": "bullets",
+            "verbosity": "medium",
+            "up_sentiment": "good",
+            "aggregation": "sum",
+            "labels": [
+                {
+                    "id": "months",
+                    "title": "months",
+                    "singular": "months",
+                    "plural": "months"
+                }
+            ]
+        }
+    },
+    "queryStartTime": "2019-07-21T03:53:05",
+    "continuousDates": false,
+    "nullAsZero": false,
+    "minDate": 1301641200000,
+    "maxDate": 1330588800000,
+    "tickLevel": "month",
+    "realTimeRefreshing": false,
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    }
+}
