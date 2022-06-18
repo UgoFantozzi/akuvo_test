@@ -1,0 +1,75 @@
+{
+    "filters": [
+        {
+            "jaql": {
+                "datasource": {
+                    "title": "Sample Lead Generation",
+                    "fullname": "LocalHost/Sample Lead Generation",
+                    "id": "localhost_aSampleIAAaLeadIAAaGeneration",
+                    "address": "LocalHost",
+                    "database": "aSampleIAAaLeadIAAaGeneration"
+                },
+                "table": "Lead Generation",
+                "column": "Date",
+                "dim": "[Lead Generation.Date (Calendar)]",
+                "datatype": "datetime",
+                "merged": true,
+                "title": "DATE",
+                "level": "years",
+                "collapsed": false,
+                "filter": {
+                    "explicit": false,
+                    "multiSelection": true,
+                    "all": true
+                }
+            },
+            "isCascading": false,
+            "disabled": false
+        },
+        {
+            "jaql": {
+                "datasource": {
+                    "title": "Sample Lead Generation",
+                    "fullname": "LocalHost/Sample Lead Generation",
+                    "id": "localhost_aSampleIAAaLeadIAAaGeneration",
+                    "address": "LocalHost",
+                    "database": "aSampleIAAaLeadIAAaGeneration"
+                },
+                "column": "Marketing Qualified",
+                "dim": "[Lead Generation.Marketing Qualified]",
+                "datatype": "text",
+                "title": "MARKETING QUALIFIED",
+                "collapsed": false,
+                "filter": {
+                    "explicit": false,
+                    "multiSelection": true,
+                    "all": true
+                }
+            },
+            "isCascading": false
+        },
+        {
+            "jaql": {
+                "datasource": {
+                    "title": "Sample Lead Generation",
+                    "fullname": "LocalHost/Sample Lead Generation",
+                    "id": "localhost_aSampleIAAaLeadIAAaGeneration",
+                    "address": "LocalHost",
+                    "database": "aSampleIAAaLeadIAAaGeneration"
+                },
+                "column": "Country",
+                "dim": "[Lead Generation.Country]",
+                "datatype": "text",
+                "title": "LOCATION",
+                "collapsed": false,
+                "filter": {
+                    "explicit": false,
+                    "multiSelection": true,
+                    "all": true
+                }
+            },
+            "isCascading": false,
+            "disabled": false
+        }
+    ]
+}

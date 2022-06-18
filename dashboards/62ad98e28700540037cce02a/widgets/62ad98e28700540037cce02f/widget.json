@@ -1,0 +1,230 @@
+{
+    "title": "QUALIFIED",
+    "type": "indicator",
+    "subtype": "indicator/numeric",
+    "oid": "62ad98e28700540037cce02f",
+    "desc": null,
+    "datasource": {
+        "title": "Sample Lead Generation",
+        "fullname": "LocalHost/Sample Lead Generation",
+        "id": "localhost_aSampleIAAaLeadIAAaGeneration",
+        "address": "LocalHost",
+        "database": "aSampleIAAaLeadIAAaGeneration"
+    },
+    "metadata": {
+        "ignore": {
+            "dimensions": [],
+            "ids": [],
+            "all": false
+        },
+        "panels": [
+            {
+                "name": "value",
+                "items": [
+                    {
+                        "jaql": {
+                            "type": "measure",
+                            "formula": "DUPcount([59924-61E])",
+                            "context": {
+                                "[59924-61E]": {
+                                    "table": "Lead Generation",
+                                    "column": "Marketing Qualified",
+                                    "dim": "[Lead Generation.Marketing Qualified]",
+                                    "datatype": "text",
+                                    "merged": true,
+                                    "title": "Marketing  Qualified"
+                                }
+                            },
+                            "title": "QUALIFIED"
+                        },
+                        "format": {
+                            "mask": {
+                                "type": "number",
+                                "abbreviations": {
+                                    "t": true,
+                                    "b": true,
+                                    "m": true,
+                                    "k": false
+                                },
+                                "separated": true,
+                                "decimals": "auto",
+                                "isdefault": true
+                            },
+                            "color": {
+                                "type": "color",
+                                "color": "#4b943a"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "secondary",
+                "items": []
+            },
+            {
+                "name": "min",
+                "items": [
+                    {
+                        "jaql": {
+                            "formula": "0",
+                            "title": "0 (default)"
+                        },
+                        "format": {
+                            "mask": {
+                                "type": "number",
+                                "abbreviations": {
+                                    "t": true,
+                                    "b": true,
+                                    "m": true,
+                                    "k": false
+                                },
+                                "separated": true,
+                                "decimals": "auto",
+                                "isdefault": true
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "max",
+                "items": [
+                    {
+                        "jaql": {
+                            "type": "measure",
+                            "formula": "5000",
+                            "context": {},
+                            "title": "5000"
+                        },
+                        "format": {
+                            "mask": {
+                                "type": "number",
+                                "abbreviations": {
+                                    "t": true,
+                                    "b": true,
+                                    "m": true,
+                                    "k": false
+                                },
+                                "separated": true,
+                                "decimals": "auto",
+                                "isdefault": true
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "filters",
+                "items": [
+                    {
+                        "jaql": {
+                            "datasource": {
+                                "title": "Sample Lead Generation",
+                                "fullname": "LocalHost/Sample Lead Generation",
+                                "id": "localhost_aSampleIAAaLeadIAAaGeneration",
+                                "address": "LocalHost",
+                                "database": "aSampleIAAaLeadIAAaGeneration"
+                            },
+                            "column": "Marketing Qualified",
+                            "dim": "[Lead Generation.Marketing Qualified]",
+                            "datatype": "text",
+                            "filter": {
+                                "explicit": false,
+                                "multiSelection": true,
+                                "exclude": {
+                                    "members": [
+                                        "No"
+                                    ]
+                                }
+                            },
+                            "title": "Marketing Qualified",
+                            "collapsed": true
+                        },
+                        "format": {
+                            "mask": {
+                                "isdefault": true
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "dashboardid": "62ad98e28700540037cce02a",
+    "options": {
+        "title": false,
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "allowSelector": false,
+        "disallowSelector": true,
+        "triggersDomready": true,
+        "noTitle": false
+    },
+    "size": "big",
+    "style": {
+        "subtype": "simple",
+        "skin": "1",
+        "components": {
+            "title": {
+                "inactive": false,
+                "enabled": false
+            },
+            "icon": {
+                "inactive": true,
+                "enabled": true
+            },
+            "secondaryTitle": {
+                "inactive": true,
+                "enabled": true
+            }
+        },
+        "indicator/numeric": {
+            "subtype": "simple",
+            "skin": "vertical",
+            "components": {
+                "title": {
+                    "inactive": false,
+                    "enabled": true
+                },
+                "icon": {
+                    "inactive": false,
+                    "enabled": true
+                },
+                "secondaryTitle": {
+                    "inactive": true,
+                    "enabled": true
+                }
+            }
+        },
+        "indicator/gauge": {
+            "subtype": "round",
+            "skin": "1",
+            "components": {
+                "ticks": {
+                    "inactive": false,
+                    "enabled": true
+                },
+                "labels": {
+                    "inactive": false,
+                    "enabled": true
+                },
+                "title": {
+                    "inactive": false,
+                    "enabled": true
+                },
+                "secondaryTitle": {
+                    "inactive": true,
+                    "enabled": true
+                }
+            }
+        },
+        "indicator/pictogram": {}
+    },
+    "_dataSourcePermission": "edit",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    }
+}

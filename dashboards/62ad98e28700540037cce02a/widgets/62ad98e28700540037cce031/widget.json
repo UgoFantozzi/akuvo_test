@@ -1,0 +1,214 @@
+{
+    "title": "PAGE CONVERSION RATES",
+    "type": "chart/line",
+    "subtype": "line/spline",
+    "oid": "62ad98e28700540037cce031",
+    "desc": null,
+    "datasource": {
+        "title": "Sample Lead Generation",
+        "fullname": "LocalHost/Sample Lead Generation",
+        "id": "localhost_aSampleIAAaLeadIAAaGeneration",
+        "address": "LocalHost",
+        "database": "aSampleIAAaLeadIAAaGeneration"
+    },
+    "metadata": {
+        "ignore": {
+            "dimensions": [],
+            "ids": [],
+            "all": false
+        },
+        "panels": [
+            {
+                "name": "x-axis",
+                "items": [
+                    {
+                        "jaql": {
+                            "table": "Lead Generation",
+                            "column": "Landing Page",
+                            "dim": "[Lead Generation.Landing Page]",
+                            "datatype": "text",
+                            "merged": true,
+                            "title": "Landing Page"
+                        }
+                    },
+                    {
+                        "jaql": {
+                            "table": "Lead Generation",
+                            "column": "Date",
+                            "dim": "[Lead Generation.Date (Calendar)]",
+                            "datatype": "datetime",
+                            "merged": true,
+                            "level": "quarters",
+                            "title": "Quarters in Date"
+                        },
+                        "format": {
+                            "mask": {
+                                "years": "yyyy",
+                                "quarters": "Q-yy",
+                                "months": "MM/yyyy",
+                                "days": "shortDate"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "values",
+                "items": [
+                    {
+                        "jaql": {
+                            "table": "Lead Generation",
+                            "column": "# Visits",
+                            "dim": "[Lead Generation.# Visits]",
+                            "datatype": "numeric",
+                            "agg": "sum",
+                            "title": "Total # Visits"
+                        },
+                        "format": {
+                            "mask": {
+                                "type": "number",
+                                "abbreviations": {
+                                    "t": true,
+                                    "b": true,
+                                    "m": true,
+                                    "k": true
+                                },
+                                "separated": true,
+                                "decimals": "auto",
+                                "isdefault": true
+                            },
+                            "color_bkp": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "break by",
+                "items": [
+                    {
+                        "jaql": {
+                            "table": "Lead Generation",
+                            "column": "Flow Status",
+                            "dim": "[Lead Generation.Flow Status]",
+                            "datatype": "text",
+                            "merged": true,
+                            "title": "Flow Status"
+                        },
+                        "format": {
+                            "members": {
+                                "Converted": {
+                                    "color": "#4b943a",
+                                    "title": "Converted",
+                                    "inResultset": true
+                                },
+                                "Drop Off": {
+                                    "color": "#008c9c",
+                                    "title": "Drop Off",
+                                    "inResultset": true
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "filters",
+                "items": []
+            }
+        ]
+    },
+    "dashboardid": "62ad98e28700540037cce02a",
+    "options": {
+        "dashboardFiltersMode": "select",
+        "selector": true,
+        "triggersDomready": true,
+        "previousScrollerLocation": {
+            "min": null,
+            "max": null
+        },
+        "maxCharsPerLabelXAxis": 5
+    },
+    "style": {
+        "lineWidth": {
+            "width": "bold"
+        },
+        "legend": {
+            "enabled": true,
+            "position": "top"
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "markers": {
+            "enabled": true,
+            "fill": "hollow",
+            "size": "small"
+        },
+        "xAxis": {
+            "enabled": true,
+            "ticks": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "gridLines": false,
+            "title": {
+                "enabled": true,
+                "text": "Page"
+            },
+            "x2Title": {
+                "enabled": true,
+                "text": "Quarter"
+            },
+            "intervalEnabled": false
+        },
+        "yAxis": {
+            "inactive": false,
+            "enabled": true,
+            "ticks": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "gridLines": true,
+            "logarithmic": false,
+            "title": {
+                "enabled": true,
+                "text": "Visitors"
+            },
+            "intervalEnabled": true
+        },
+        "y2Axis": {
+            "inactive": true,
+            "enabled": true,
+            "ticks": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "gridLines": false,
+            "logarithmic": false,
+            "title": {
+                "enabled": false
+            },
+            "intervalEnabled": true
+        },
+        "navigator": {
+            "enabled": false
+        },
+        "dataLimits": {
+            "seriesCapacity": 50,
+            "categoriesCapacity": 100000
+        }
+    },
+    "_dataSourcePermission": "edit",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    }
+}

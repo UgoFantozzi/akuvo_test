@@ -1,0 +1,33 @@
+{
+    "title": "Akuvo Des1",
+    "desc": "",
+    "style": {
+        "palette": "vivid"
+    },
+    "layout": "./layout.json",
+    "datasource": {
+        "title": "Sample Lead Generation",
+        "fullname": "LocalHost/Sample Lead Generation",
+        "id": "localhost_aSampleIAAaLeadIAAaGeneration",
+        "address": "LocalHost",
+        "database": "aSampleIAAaLeadIAAaGeneration"
+    },
+    "filters": "./filters.json",
+    "oid": "62ad98e28700540037cce02a",
+    "options": {
+        "manual": false
+    },
+    "parentFolder": null,
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "widgets": [
+        "./widgets/62ad98e28700540037cce02b/widget.json",
+        "./widgets/62ad98e28700540037cce02c/widget.json",
+        "./widgets/62ad98e28700540037cce02d/widget.json",
+        "./widgets/62ad98e28700540037cce02e/widget.json",
+        "./widgets/62ad98e28700540037cce02f/widget.json",
+        "./widgets/62ad98e28700540037cce030/widget.json",
+        "./widgets/62ad98e28700540037cce031/widget.json"
+    ]
+}

@@ -1,0 +1,141 @@
+{
+    "title": "TOTAL VISITOR BY LOCATION",
+    "type": "map/scatter",
+    "subtype": "map/scatter",
+    "oid": "62ad98e28700540037cce02c",
+    "desc": null,
+    "datasource": {
+        "title": "Sample Lead Generation",
+        "fullname": "LocalHost/Sample Lead Generation",
+        "id": "localhost_aSampleIAAaLeadIAAaGeneration",
+        "address": "LocalHost",
+        "database": "aSampleIAAaLeadIAAaGeneration"
+    },
+    "metadata": {
+        "ignore": {
+            "dimensions": [],
+            "ids": [],
+            "all": false
+        },
+        "panels": [
+            {
+                "name": "geo",
+                "items": [
+                    {
+                        "jaql": {
+                            "table": "Lead Generation",
+                            "column": "City",
+                            "dim": "[Lead Generation.City]",
+                            "datatype": "text",
+                            "merged": true,
+                            "title": "City"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "color",
+                "items": [
+                    {
+                        "jaql": {
+                            "table": "Lead Generation",
+                            "column": "# Visits",
+                            "dim": "[Lead Generation.# Visits]",
+                            "datatype": "numeric",
+                            "agg": "sum",
+                            "title": "Total # Visits"
+                        },
+                        "format": {
+                            "mask": {
+                                "type": "number",
+                                "abbreviations": {
+                                    "t": true,
+                                    "b": true,
+                                    "m": true,
+                                    "k": false
+                                },
+                                "separated": true,
+                                "decimals": "auto",
+                                "isdefault": true
+                            },
+                            "color": {
+                                "steps": 9,
+                                "min": "#165e5f",
+                                "max": "#6eda55",
+                                "minvalue": null,
+                                "midvalue": null,
+                                "maxvalue": null,
+                                "type": "range",
+                                "rangeMode": "both"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "size",
+                "items": [
+                    {
+                        "jaql": {
+                            "table": "Lead Generation",
+                            "column": "# Converted",
+                            "dim": "[Lead Generation.# Converted]",
+                            "datatype": "numeric",
+                            "agg": "sum",
+                            "title": "Total # Converted"
+                        },
+                        "format": {
+                            "mask": {
+                                "type": "number",
+                                "abbreviations": {
+                                    "t": true,
+                                    "b": true,
+                                    "m": true,
+                                    "k": false
+                                },
+                                "separated": true,
+                                "decimals": "auto",
+                                "isdefault": true
+                            },
+                            "size": {
+                                "min": 4,
+                                "max": 24
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "filters",
+                "items": []
+            }
+        ]
+    },
+    "dashboardid": "62ad98e28700540037cce02a",
+    "options": {
+        "dashboardFiltersMode": "select",
+        "selector": false,
+        "disallowSelector": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "markers": {
+            "fill": "filled",
+            "size": {
+                "inactive": false,
+                "min": 4,
+                "max": 24,
+                "lowest": 1,
+                "highest": 42,
+                "step": 1,
+                "defaultSize": 4
+            }
+        }
+    },
+    "_dataSourcePermission": "edit",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    }
+}
