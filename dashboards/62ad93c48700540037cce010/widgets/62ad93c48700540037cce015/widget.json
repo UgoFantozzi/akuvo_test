@@ -1,0 +1,320 @@
+{
+    "title": "Profit per Product",
+    "type": "chart/column",
+    "subtype": "column/classic",
+    "oid": "62ad93c48700540037cce015",
+    "desc": null,
+    "datasource": {
+        "title": "Sample Retail",
+        "fullname": "LocalHost/Sample Retail",
+        "id": "localhost_aSampleIAAaRetail",
+        "address": "LocalHost",
+        "database": "aSampleIAAaRetail"
+    },
+    "metadata": {
+        "ignore": {
+            "dimensions": [],
+            "ids": [],
+            "all": false
+        },
+        "panels": [
+            {
+                "name": "categories",
+                "items": [
+                    {
+                        "jaql": {
+                            "table": "DimProducts",
+                            "column": "ProductName",
+                            "dim": "[DimProducts.ProductName]",
+                            "datatype": "text",
+                            "merged": true,
+                            "title": "ProductName"
+                        },
+                        "field": {
+                            "id": "[DimProducts.ProductName]",
+                            "index": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "values",
+                "items": [
+                    {
+                        "jaql": {
+                            "type": "measure",
+                            "formula": "[06744-77B]-[5546C-447]",
+                            "context": {
+                                "[5546C-447]": {
+                                    "table": "Fact_Purchase_Orders",
+                                    "column": "PurchaseCost",
+                                    "dim": "[Fact_Purchase_Orders.PurchaseCost]",
+                                    "datatype": "numeric",
+                                    "agg": "sum",
+                                    "title": "Total PurchaseCost"
+                                },
+                                "[06744-77B]": {
+                                    "table": "Fact_Sale_orders",
+                                    "column": "OrderRevenue",
+                                    "dim": "[Fact_Sale_orders.OrderRevenue]",
+                                    "datatype": "numeric",
+                                    "agg": "sum",
+                                    "title": "Total OrderRevenue"
+                                }
+                            },
+                            "title": "Profit"
+                        },
+                        "format": {
+                            "mask": {
+                                "type": "number",
+                                "abbreviations": {
+                                    "t": true,
+                                    "b": true,
+                                    "m": true,
+                                    "k": true
+                                },
+                                "separated": true,
+                                "decimals": "auto",
+                                "isdefault": true
+                            },
+                            "color": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            }
+                        },
+                        "field": {
+                            "id": "[06744-77B]-[5546C-447]",
+                            "index": 1
+                        }
+                    },
+                    {
+                        "jaql": {
+                            "type": "measure",
+                            "formula": "avg([A223D-B7D],[24446-781])",
+                            "context": {
+                                "[A223D-B7D]": {
+                                    "table": "DimProducts",
+                                    "column": "ProductName",
+                                    "dim": "[DimProducts.ProductName]",
+                                    "datatype": "text",
+                                    "merged": true,
+                                    "title": "ProductName"
+                                },
+                                "[24446-781]": {
+                                    "type": "measure",
+                                    "formula": "[06744-77B]-[5546C-447]",
+                                    "context": {
+                                        "[5546C-447]": {
+                                            "table": "Fact_Purchase_Orders",
+                                            "column": "PurchaseCost",
+                                            "dim": "[Fact_Purchase_Orders.PurchaseCost]",
+                                            "datatype": "numeric",
+                                            "agg": "sum",
+                                            "title": "Total PurchaseCost"
+                                        },
+                                        "[06744-77B]": {
+                                            "table": "Fact_Sale_orders",
+                                            "column": "OrderRevenue",
+                                            "dim": "[Fact_Sale_orders.OrderRevenue]",
+                                            "datatype": "numeric",
+                                            "agg": "sum",
+                                            "title": "Total OrderRevenue"
+                                        }
+                                    },
+                                    "title": "Profit"
+                                }
+                            },
+                            "title": "avg([ProductName],[Profit])"
+                        },
+                        "format": {
+                            "mask": {
+                                "type": "number",
+                                "abbreviations": {
+                                    "t": true,
+                                    "b": true,
+                                    "m": true,
+                                    "k": true
+                                },
+                                "separated": true,
+                                "decimals": "auto",
+                                "isdefault": true
+                            },
+                            "color": {
+                                "color": "#9b9bd7",
+                                "type": "color"
+                            }
+                        },
+                        "field": {
+                            "id": "avg([A223D-B7D],[24446-781])",
+                            "index": 2
+                        },
+                        "singleSeriesType": "line"
+                    }
+                ]
+            },
+            {
+                "name": "break by",
+                "items": []
+            },
+            {
+                "name": "filters",
+                "items": [
+                    {
+                        "jaql": {
+                            "table": "DimProducts",
+                            "column": "ProductName",
+                            "dim": "[DimProducts.ProductName]",
+                            "datatype": "text",
+                            "merged": true,
+                            "title": "ProductName",
+                            "filter": {
+                                "top": 10,
+                                "by": {
+                                    "type": "measure",
+                                    "formula": "[06744-77B]-[5546C-447]",
+                                    "context": {
+                                        "[5546C-447]": {
+                                            "table": "Fact_Purchase_Orders",
+                                            "column": "PurchaseCost",
+                                            "dim": "[Fact_Purchase_Orders.PurchaseCost]",
+                                            "datatype": "numeric",
+                                            "agg": "sum",
+                                            "title": "Total PurchaseCost"
+                                        },
+                                        "[06744-77B]": {
+                                            "table": "Fact_Sale_orders",
+                                            "column": "OrderRevenue",
+                                            "dim": "[Fact_Sale_orders.OrderRevenue]",
+                                            "datatype": "numeric",
+                                            "agg": "sum",
+                                            "title": "Total OrderRevenue"
+                                        }
+                                    },
+                                    "title": "Profit"
+                                }
+                            },
+                            "collapsed": false,
+                            "datasource": {
+                                "title": "Sample Retail",
+                                "fullname": "LocalHost/Sample Retail",
+                                "id": "localhost_aSampleIAAaRetail",
+                                "address": "LocalHost",
+                                "database": "aSampleIAAaRetail"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "dashboardid": "62ad93c48700540037cce010",
+    "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false
+    },
+    "instanceid": "D57AD-6C7E-FE",
+    "options": {
+        "dashboardFiltersMode": "select",
+        "selector": true,
+        "triggersDomready": true,
+        "autoUpdateOnEveryChange": true,
+        "drillToAnywhere": true,
+        "maxCharsPerLabelXAxis": 9,
+        "previousScrollerLocation": {
+            "min": 0,
+            "max": 9
+        }
+    },
+    "style": {
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "ticks": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            },
+            "gridLines": true,
+            "isIntervalEnabled": false
+        },
+        "yAxis": {
+            "inactive": false,
+            "enabled": true,
+            "ticks": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "title": {
+                "enabled": false
+            },
+            "gridLines": true,
+            "logarithmic": false,
+            "hideMinMax": false,
+            "isIntervalEnabled": true
+        },
+        "y2Axis": {
+            "inactive": true,
+            "enabled": true,
+            "ticks": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "title": {
+                "enabled": false
+            },
+            "gridLines": false,
+            "logarithmic": false,
+            "hideMinMax": false,
+            "isIntervalEnabled": true
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "dataLimits": {
+            "seriesCapacity": 50,
+            "categoriesCapacity": 100000
+        }
+    },
+    "queryStartTime": "2019-07-21T03:53:05",
+    "continuousDates": false,
+    "nullAsZero": false,
+    "realTimeRefreshing": false,
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    }
+}

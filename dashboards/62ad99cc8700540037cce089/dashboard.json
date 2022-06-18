@@ -1,0 +1,44 @@
+{
+    "title": "akuvo admin",
+    "desc": "",
+    "style": {
+        "name": "vivid",
+        "palette": {
+            "colors": [
+                "#00cee6",
+                "#9b9bd7",
+                "#6EDA55",
+                "#fc7570",
+                "#fbb755",
+                "#218A8C"
+            ],
+            "name": "Vivid",
+            "sortOrder": 10,
+            "isSystem": true,
+            "systemDefault": true
+        }
+    },
+    "layout": "./layout.json",
+    "datasource": {
+        "title": "Sample Retail",
+        "fullname": "LocalHost/Sample Retail",
+        "id": "localhost_aSampleIAAaRetail",
+        "address": "LocalHost",
+        "database": "aSampleIAAaRetail"
+    },
+    "filters": "./filters.json",
+    "oid": "62ad99cc8700540037cce089",
+    "parentFolder": null,
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "widgets": [
+        "./widgets/62ad99cc8700540037cce08a/widget.json",
+        "./widgets/62ad99cc8700540037cce08b/widget.json",
+        "./widgets/62ad99cc8700540037cce08c/widget.json",
+        "./widgets/62ad99cc8700540037cce08d/widget.json",
+        "./widgets/62ad99cc8700540037cce08e/widget.json",
+        "./widgets/62ad99cc8700540037cce08f/widget.json"
+    ],
+    "hierarchies": []
+}

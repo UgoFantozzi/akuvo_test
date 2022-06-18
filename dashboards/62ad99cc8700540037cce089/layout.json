@@ -1,0 +1,134 @@
+{
+    "layout": {
+        "instanceid": "F5686-F2AA-59",
+        "type": "columnar",
+        "columns": [
+            {
+                "width": 100,
+                "cells": [
+                    {
+                        "subcells": [
+                            {
+                                "elements": [
+                                    {
+                                        "minHeight": 64,
+                                        "maxHeight": 1028,
+                                        "height": 192,
+                                        "minWidth": 48,
+                                        "maxWidth": 1028,
+                                        "defaultWidth": 512,
+                                        "widgetid": "62ad99cc8700540037cce08b"
+                                    }
+                                ],
+                                "width": 25,
+                                "stretchable": false,
+                                "pxlWidth": 297,
+                                "index": 0
+                            },
+                            {
+                                "elements": [
+                                    {
+                                        "minHeight": 64,
+                                        "maxHeight": 1028,
+                                        "height": 192,
+                                        "minWidth": 48,
+                                        "maxWidth": 1028,
+                                        "defaultWidth": 512,
+                                        "widgetid": "62ad99cc8700540037cce08d"
+                                    }
+                                ],
+                                "width": 28.30665543386689,
+                                "stretchable": false,
+                                "pxlWidth": 336,
+                                "index": 1
+                            },
+                            {
+                                "elements": [
+                                    {
+                                        "minHeight": 64,
+                                        "maxHeight": 1028,
+                                        "height": 192,
+                                        "minWidth": 48,
+                                        "maxWidth": 1028,
+                                        "defaultWidth": 512,
+                                        "widgetid": "62ad99cc8700540037cce08f"
+                                    }
+                                ],
+                                "width": 46.693344566133106,
+                                "stretchable": false,
+                                "pxlWidth": 851,
+                                "index": 2
+                            }
+                        ]
+                    },
+                    {
+                        "subcells": [
+                            {
+                                "elements": [
+                                    {
+                                        "minHeight": 96,
+                                        "maxHeight": 2048,
+                                        "minWidth": 128,
+                                        "maxWidth": 2048,
+                                        "height": 384,
+                                        "defaultWidth": 512,
+                                        "widgetid": "62ad99cc8700540037cce08a"
+                                    }
+                                ],
+                                "width": 100,
+                                "stretchable": false,
+                                "pxlWidth": 799,
+                                "index": 0
+                            }
+                        ]
+                    },
+                    {
+                        "subcells": [
+                            {
+                                "elements": [
+                                    {
+                                        "minHeight": 96,
+                                        "maxHeight": 2048,
+                                        "minWidth": 128,
+                                        "maxWidth": 2048,
+                                        "height": 384,
+                                        "defaultWidth": 512,
+                                        "widgetid": "62ad99cc8700540037cce08c"
+                                    }
+                                ],
+                                "width": 100,
+                                "stretchable": false,
+                                "pxlWidth": 799,
+                                "index": 0
+                            }
+                        ]
+                    },
+                    {
+                        "subcells": [
+                            {
+                                "elements": [
+                                    {
+                                        "minHeight": 128,
+                                        "maxHeight": 2048,
+                                        "minWidth": 128,
+                                        "maxWidth": 2048,
+                                        "height": 384,
+                                        "defaultWidth": 512,
+                                        "widgetid": "62ad99cc8700540037cce08e"
+                                    }
+                                ],
+                                "width": 100,
+                                "stretchable": false,
+                                "pxlWidth": 799,
+                                "index": 0
+                            }
+                        ]
+                    }
+                ],
+                "pxlWidth": 799,
+                "index": 0
+            }
+        ],
+        "container": {}
+    }
+}
